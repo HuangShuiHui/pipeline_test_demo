@@ -25,7 +25,7 @@ def read_json_text(json_string){
 
 def write_json_file(json_string, tofile_path){
         def input = readJSON text : json_string
-        writeJson file : tofile_path,json : input
+        writeJSON file : tofile_path,json : input
 }
 
 return this;
