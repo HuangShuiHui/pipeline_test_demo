@@ -1,4 +1,5 @@
 import hudson.model.*;
+import groovy.json.*;
 
 def find_files(filetype){
     def files = findFiles(glob:filetype)
@@ -22,5 +23,9 @@ def read_json_text(json_string){
 
 }
 
+def write_json_file(json_string, tofile_path){
+        def input = readJson text : json_string
+        writeJson file : tofile_path,json : input
+}
 
 return this;

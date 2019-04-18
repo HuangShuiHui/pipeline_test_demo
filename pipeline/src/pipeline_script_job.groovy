@@ -24,6 +24,8 @@ pipeline{
                     json_file = model_test.read_json_file(file_path)
                     json_string = '{"a":"a","b":"b"}'
                     json_text = model_test.read_json_text(json_string)
+                    tofile_path = env.WORKSPACE + "/testdata/new.json"
+                    model_test.write_json_file(json_string,tofile_path)
                 }
             }
         }
